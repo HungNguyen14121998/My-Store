@@ -11,7 +11,7 @@ The MyStore application front-end use for manage store with features:
 ## Setup Project
 
 ```
-npm install
+npm install --legacy-peer-deps
 ```
 
 ## Run Project
