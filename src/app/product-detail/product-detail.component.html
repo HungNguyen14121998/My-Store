@@ -6,6 +6,7 @@
         <div class="align-middle">
             <h2>{{product.name}}</h2>
             <p>${{product.price}}</p>
+            <p>{{product.description}}</p>
             <select [(ngModel)]="selectedItem" (ngModelChange)="selectedItemChange($event)" class="form-select" style="width: 160px;" aria-label="Default select example">
                 <option value="1">1</option>
                 <option value="2">2</option>

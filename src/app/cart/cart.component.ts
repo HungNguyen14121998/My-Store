@@ -30,6 +30,10 @@ export class CartComponent implements OnInit {
   }
 
   changeAmmout(product: Product) {
+    let isDelete: Boolean = false;
+    if (product.amount == 0) {
+      isDelete = true;
+    }
     let updateProducts = this.orderProducts.map((pro) => {
       if (pro.id == product.id) {
         pro.amount = product.amount;
@@ -40,6 +44,10 @@ export class CartComponent implements OnInit {
     this.cartService.updateProduct(updateProducts);
 
     this.getData();
+
+    if (isDelete) {
+      alert(`Remove ${product.name} from cart`);
+    }
   }
 
   submitForm(userInfo: User): void {
